@@ -67,7 +67,6 @@
     height: 100vh; /* Ajusta la altura según tus necesidades */
 }
 
-
 @keyframes moveBackground {
     0% {
         background-position: 100% 50%;
@@ -80,43 +79,8 @@
     }
 }
 
-@media (max-width: 925px) {
+@media (max-width: 1150px) {
     .container-text {
-        padding: 8% 4%;
+        padding: 8% 2%;
     }
 }
-
-@media (max-width: 850px) {
-    .container-text {
-        padding: 8% 4%;
-    }
-
-    .container-text h1 {
-        font-size: 40px;
-        line-height: 45px;
-    }
-
-    .container-text p {
-        font-size: 20px;
-        font-weight: 500;
-    }
-}
-
-/*
-
-@media (max-width: 600px) {
-    .container-text h1 {
-        font-size: 32px;
-        line-height: 35px;
-    }
-
-    .container-text p {
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-    .headerOne { 
-        padding: 130px 10% 0px 10%;
-    }
-}
-*/
