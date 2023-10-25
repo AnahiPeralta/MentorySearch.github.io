@@ -53,7 +53,7 @@ ul.nav li i {
     height: 60px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 800px) {
     .nav-bar {
         display:grid;
         justify-content: center;
