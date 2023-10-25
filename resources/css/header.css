@@ -22,7 +22,7 @@ nav.header.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 7%;
+    padding: 0.5rem 7%;
 }
 
 .nav-bar ul.nav {
@@ -53,3 +53,43 @@ ul.nav li i {
     height: 60px;
 }
 
+@media (max-width: 600px) {
+    .nav-bar {
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navigation{
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+
+    .nav-bar ul.nav a {
+        background-color: rgb(0, 42, 133);
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+    .nav-bar a li{
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .nav-bar ul.nav {
+        gap: 10px;
+    }
+}

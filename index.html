@@ -22,10 +22,12 @@
                 <div class="logo">
                     <img src="resources/img/l-pescar2.webp" alt="Fundación Pescar">
                 </div>
-                <ul class="nav">
-                    <a href=""><li class="active"><i class="fa-solid fa-users"></i>Mentorias</li></a>
-                    <a href=""><li><i class="fa-solid fa-user"></i>Perfiles</li></a>
-                </ul>
+                <div class="navigation">
+                    <ul class="nav">
+                        <a href=""><li class="active"><i class="fa-solid fa-users"></i>Mentorias</li></a>
+                        <a href=""><li><i class="fa-solid fa-user"></i>Perfiles</li></a>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -37,12 +39,12 @@
                     <h1 id="typing-text">"Si crees en <strong>ti mismo</strong>, no habrá nada que esté fuera de tus posibilidades"</h1>
                     <p>Equipo del Centro Pescar, Programación Salta</p>    
                 </div>
-                <div class="search">
-                    <input type="text" id="searchInput" placeholder="Buscar por nombre">
-                    <button onclick="searchCards()">Buscar</button>
-                </div>
             </div>
         </section>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre">
+            <button onclick="searchCards()">Buscar</button>
+        </div>
         <div id="searchResults">
         </div>
         <section id="cards">
