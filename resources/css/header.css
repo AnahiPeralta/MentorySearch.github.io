@@ -53,18 +53,3 @@ ul.nav li i {
     height: 60px;
 }
 
-@media (max-width: 600px) {
-    .nav-bar {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 4% 20px 4%;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-}
-
