@@ -80,4 +80,41 @@
     }
 }
 
+@media (max-width: 925px) {
+    .container-text {
+        padding: 8% 4%;
+    }
+}
+
+@media (max-width: 850px) {
+    .container-text {
+        padding: 8% 4%;
+    }
+
+    .container-text h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .container-text p {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-text h1 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .container-text p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .headerOne { 
+        padding: 130px 10% 0px 10%;
+    }
+}
 
