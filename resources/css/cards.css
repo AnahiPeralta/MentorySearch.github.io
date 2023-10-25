@@ -1,0 +1,61 @@
+@import url('default.css');
+
+.headerOne { 
+    position: relative;
+    background: linear-gradient(90deg,#ec8d68d0, #5d34afce ,#0f0b52c4);
+    padding: 80px 10% 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: 150% 100%;
+    animation: moveBackground 10s linear infinite;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg-grupoPescar.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.search {
+    background: white;
+    padding: 20px 20px 0px 20px;
+}
+
+.container-text {
+    padding: 10%;
+}
+
+.mentor img, .mentee img{
+    height: 60px;
+}
+
+.card-mentoring {
+    padding: 60px 7%;
+}
+
+
+.section-before-cards {
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+
+@keyframes moveBackground {
+    0% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

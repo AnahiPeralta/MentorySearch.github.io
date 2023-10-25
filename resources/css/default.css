@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&family=Raleway:wght@400;500;600;700&family=Roboto&display=swap');
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+:root {
+    --fontT: 70px;
+    --fontS: 32px;
+    --fontP: 16px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Radley', serif;
+    font-family: 'Raleway', sans-serif;
+}

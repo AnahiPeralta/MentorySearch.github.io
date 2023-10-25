@@ -1,0 +1,62 @@
+@import url('default.css');
+
+* {
+    margin: 0;
+}
+
+nav.header {
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s;
+    z-index: 1;
+    background-color: white;
+}
+
+nav.header.scrolled {
+    background-color: rgba(8, 8, 8, 0.11);
+    transition: background-color 0.3s;
+    backdrop-filter: blur(3px);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 7%;
+}
+
+.nav-bar ul.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-bar ul.nav a {
+    text-decoration: none;
+}
+
+.nav-bar a li{
+    color: rgb(9, 0, 139);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-transform:uppercase;
+}
+
+ul.nav li i {
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        display: grid;
+        justify-content: center;
+    }
+}
+

@@ -3,7 +3,7 @@
         "mentor": {
             "name": "Ignacio",
             "last_name": "Espil",
-            "profile": "",
+            "profile": "resources/img/IgnacioEspil.jpg",
             "role": "Mentor",
             "hall": 1,
             "linkedin": ""
@@ -11,7 +11,7 @@
         "mentee": {
             "name": "Natalia Camila",
             "last_name": "Herrera",
-            "profile": "",
+            "profile": "resources/img/NataliaCamilaHerrera.jpg",
             "role": "Mentee",
             "linkedin": ""
         } 
@@ -21,7 +21,7 @@
         "mentor": {
             "name": "Ignacio",
             "last_name": "Espil",
-            "profile": "",
+            "profile": "resources/img/IgnacioEspil.jpg",
             "role": "Mentor",
             "hall": 1,
             "linkedin": ""
@@ -39,7 +39,7 @@
         "mentor": {
             "name": "Micaela Soledad",
             "last_name": "Di'Nunzio",
-            "profile": "",
+            "profile": "resources/img/MicaelaDiNunzio.jpg",
             "role": "Mentor",
             "hall": 1,
             "linkedin": ""
@@ -47,7 +47,7 @@
         "mentee": {
             "name": "Anahí Micaela",
             "last_name": "Peralta Mollo",
-            "profile": "",
+            "profile": "resources/img/AnahiPeralta.png",
             "role": "Mentee",
             "linkedin": ""
         } 
