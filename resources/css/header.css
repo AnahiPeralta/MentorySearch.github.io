@@ -13,7 +13,7 @@ nav.header {
 }
 
 nav.header.scrolled {
-    background-color: rgba(8, 8, 8, 0.11);
+    background-color: rgba(8, 8, 8, 0.09);
     transition: background-color 0.3s;
     backdrop-filter: blur(3px);
 }
@@ -57,6 +57,14 @@ ul.nav li i {
     .nav-bar {
         display: grid;
         justify-content: center;
+        align-items: center;
+        padding: 10px 4% 20px 4%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 }
 

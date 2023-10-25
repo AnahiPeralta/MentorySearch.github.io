@@ -9,7 +9,7 @@
     justify-content: center;
     text-align: center;
     background-size: 150% 100%;
-    animation: moveBackground 10s linear infinite;
+    animation: moveBackground 5s linear infinite;
 }
 
 .background-image {
@@ -25,13 +25,33 @@
     z-index: -1;
 }
 
+.container-text {
+    padding: 8%;
+}
+
+.container-text h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: var(--fontT);
+    color: white;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.container-text h1 strong {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.container-text p {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 20px;
+    color: white;
+    font-size: var(--fontS);
+}
+
 .search {
     background: white;
     padding: 20px 20px 0px 20px;
-}
-
-.container-text {
-    padding: 10%;
 }
 
 .mentor img, .mentee img{
@@ -59,3 +79,5 @@
         background-position: 100% 50%;
     }
 }
+
+
