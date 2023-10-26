@@ -33,7 +33,7 @@ function createCardHTML(card, index) {
                         <img class="img-profile" src="${card.mentor.profile}" class="card-img-top" alt="${card.mentor.name}">
                     </a>
                 </div>
-                <div class='info-mentor'>
+                <div class="info-mentor">
                     <span>${card.mentor.role}</span>
                     <h3 class="card-title">${card.mentor.name} ${card.mentor.last_name}</h3>
                 </div>
@@ -44,7 +44,7 @@ function createCardHTML(card, index) {
                         <img class="img-profile" src="${card.mentee.profile}" class="card-img-top" alt="${card.mentee.name}">
                     </a>
                 </div>
-                <div class='info-mentee'>
+                <div class="info-mentee">
                     <span>${card.mentee.role}</span>
                     <h3 class="card-title">${card.mentee.name} ${card.mentee.last_name}</h3>
                 </div>
