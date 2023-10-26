@@ -1,13 +1,15 @@
 const cardsContainer = document.getElementById('cards');
 const searchInput = document.getElementById('searchInput');
 const allCards = [];
+let filteredCards = []; // Inicialmente, las tarjetas filtradas son las mismas que todas las tarjetas
 
 function loadCards() {
     fetch('./data.json')
         .then(response => response.json())
         .then(data => {
             allCards.push(...data);
-            displayCards(allCards);
+            filteredCards = [...allCards]; // Inicialmente, las tarjetas filtradas son las mismas que todas las tarjetas
+            displayCards(filteredCards);
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
 }
@@ -59,19 +61,19 @@ function addSeeMoreClickListeners() {
         link.addEventListener('click', event => {
             event.preventDefault();
             const index = link.getAttribute('data-index');
-            const cardType = link.getAttribute('data-type'); // Agregar un atributo data-type en el HTML para distinguir mentor de mentee
+            const cardType = link.getAttribute('data-type');
 
+            let userData;
             if (cardType === 'mentor') {
-                const userData = allCards[index].mentor;
-                redirectToProfilePage(userData);
+                userData = filteredCards[index].mentor;
             } else if (cardType === 'mentee') {
-                const userData = allCards[index].mentee;
-                redirectToProfilePage(userData);
+                userData = filteredCards[index].mentee;
             }
+
+            redirectToProfilePage(userData);
         });
     });
 }
-
 
 function redirectToProfilePage(userData) {
     const params = new URLSearchParams(userData);
@@ -87,17 +89,16 @@ function checkPartialMatch(searchQuery, fullName) {
     return searchWords.every(word => fullName.includes(word));
 }
 
-searchInput.addEventListener('keyup', (e) => {
-    const searchQuery = removeAccents(e.target.value).toLowerCase();
-    const filteredCards = allCards.filter(card => {
+function applySearchFilter() {
+    const searchQuery = removeAccents(searchInput.value.toLowerCase());
+    filteredCards = allCards.filter(card => {
         const mentorFullName = removeAccents(`${card.mentor.name} ${card.mentor.last_name}`).toLowerCase();
         const menteeFullName = removeAccents(`${card.mentee.name} ${card.mentee.last_name}`).toLowerCase();
-        return (
-            checkPartialMatch(searchQuery, mentorFullName) || checkPartialMatch(searchQuery, menteeFullName)
-        );
+        return checkPartialMatch(searchQuery, mentorFullName) || checkPartialMatch(searchQuery, menteeFullName);
     });
-
     displayCards(filteredCards);
-});
+}
+
+searchInput.addEventListener('keyup', applySearchFilter);
 
 loadCards();
