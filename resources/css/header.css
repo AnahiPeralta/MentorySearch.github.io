@@ -53,7 +53,7 @@ ul.nav li i {
     height: 60px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 720px) {
     .nav-bar {
         display:grid;
         justify-content: center;
@@ -77,7 +77,7 @@ ul.nav li i {
     }
 
     .nav-bar ul.nav a {
-        background-color: rgb(0, 42, 133);
+        background-color: #1F288C;
         padding: 6px 10px;
         border-radius: 5px;
     }
