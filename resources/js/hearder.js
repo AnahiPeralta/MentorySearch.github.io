@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleScroll() {
         if (isScrolledIntoView(cardsSection)) {
-            nav.classList.add("scrolled"); // Agregamos la clase "scrolled" cuando se llega a la sección .cards
+            nav.classList.add("scrolled"); 
         } else {
-            nav.classList.remove("scrolled"); // Eliminamos la clase "scrolled" cuando se vuelve a las secciones antes de .cards
+            nav.classList.remove("scrolled"); 
         }
     }
 

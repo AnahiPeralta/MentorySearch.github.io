@@ -38,10 +38,22 @@ function showAllData(data) {
     if (mentorData) {
       const element = document.createElement('div');
       element.innerHTML = `
-        <h2>${mentorData.name} ${mentorData.last_name}</h2>
-        <p>Role: ${mentorData.role}</p>
-        <p>LinkedIn: <a href="${mentorData.linkedin}" target="_blank">${mentorData.linkedin}</a></p>
-        <img src="${mentorData.profile}" alt="${mentorData.name}">
+        <div class="card-container">
+          <div class="header-card"></div>
+          <div class="body-card">
+            <div class="img-container">
+              <img src="${mentorData.profile}" alt="${mentorData.name}">
+            </div>
+            <div class="info-perf">
+              <p>${mentorData.role}</p>
+              <h3>${mentorData.name} ${mentorData.last_name}</h3> 
+            </div>
+            <div class="link-redes">
+              <a href="${mentorData.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
       `;
       dataContainer.appendChild(element);
     }
@@ -49,10 +61,23 @@ function showAllData(data) {
     if (menteeData) {
       const element = document.createElement('div');
       element.innerHTML = `
-        <h2>${menteeData.name} ${menteeData.last_name}</h2>
-        <p>Role: ${menteeData.role}</p>
-        <p>LinkedIn: <a href="${menteeData.linkedin}" target="_blank">${menteeData.linkedin}</a></p>
-        <img src="${menteeData.profile}" alt="${menteeData.name}">
+        <div class="card-container">
+          <div class="header-card"></div>
+          <div class="body-card">
+            <div class="img-container">
+              <img src="${menteeData.profile}" alt="${menteeData.name}">
+            </div>
+            <div class="info-perf">
+              <p>${menteeData.role}</p>
+              <h3>${menteeData.name} ${menteeData.last_name}</h3>
+            </div>
+            <div class="link-redes">
+              <a href="${menteeData.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
       `;
       dataContainer.appendChild(element);
     }
@@ -90,10 +115,23 @@ function displayData(data) {
     if (roleData) {
       const element = document.createElement('div');
       element.innerHTML = `
-        <h2>${roleData.name} ${roleData.last_name}</h2>
-        <p>Role: ${roleData.role}</p>
-        <p>LinkedIn: <a href="${roleData.linkedin}" target="_blank">${roleData.linkedin}</a></p>
-        <img src="${roleData.profile}" alt="${roleData.name}">
+        <div class="card-container">
+          <div class="header-card"></div>
+          <div class="body-card">
+            <div class="img-container">
+              <img src="${roleData.profile}" alt="${roleData.name}">
+            </div>
+            <div class="info-perf">
+              <p>${roleData.role}</p>
+              <h3>${roleData.name} ${roleData.last_name}</h3>
+            </div>
+            <div class="link-redes">
+              <a href="${roleData.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
       `;
       dataContainer.appendChild(element);
     }
