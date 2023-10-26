@@ -62,7 +62,6 @@
     padding: 60px 7%;
 }
 
-
 .section-before-cards {
     height: 100vh; /* Ajusta la altura según tus necesidades */
 }
@@ -79,8 +78,53 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
     .container-text {
-        padding: 8% 2%;
+        padding: 8% 4%;
+    }
+
+    .container-text h1 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    
+    .container-text p {
+        font-size: 22px;
+    }    
+}
+
+@media (max-width: 800px) {
+    .container-text {
+        padding: 18% 4% 15% 4%;
+    }
+
+    .container-text h1 {
+        font-size: 34px;
+        line-height: 37px;
+    }
+    
+    .container-text p {
+        font-size: 20px;
+        margin-top: 15px;
+    }   
+}
+
+@media (max-width: 600px) {
+    .container-text {
+        padding: 25% 2% 15% 2%;
+    }
+
+    .container-text h1 {
+        font-size: 36px;
+        line-height: 38px;
+    }
+    
+    .container-text p {
+        font-size: 20px;
+        margin-top: 15px;
+    }   
+
+    .headerOne { 
+        padding: 80px 6% 0px 6%; 
     }
 }
