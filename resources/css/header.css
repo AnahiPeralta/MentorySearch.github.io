@@ -13,7 +13,7 @@ nav.header {
 }
 
 nav.header.scrolled {
-    background-color: rgba(8, 8, 8, 0.09);
+    background-color: rgba(219, 219, 219, 0.733);
     transition: background-color 0.3s;
     backdrop-filter: blur(3px);
 }
