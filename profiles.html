@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MentorySearch</title>
     <link rel="stylesheet" href="./resources/css/header.css">
-    <link rel="stylesheet" href="./resources/css/cards.css">
+    <link rel="stylesheet" href="./resources/css/profile.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,28 +31,37 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section class="headerOne">
-            <div class="background-image"></div>
-            <div class="container">
-                <div class="container-text">
-                    <h1 id="typing-text">"Si crees en <strong>ti mismo</strong>, no habrá nada que esté fuera de tus posibilidades"</h1>
-                    <p>Equipo del Centro Pescar, Programación Salta</p>    
-                </div>
-                <div class="search">
-                    <input type="text" id="searchInput" placeholder="Buscar por nombre">
-                    <button onclick="searchCards()"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+    <section class="headerOne">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="container-text">
+                <h1 id="typing-text">"Si crees en <strong>ti mismo</strong>, no habrá nada que esté fuera de tus posibilidades"</h1>
+                <p>Equipo del Centro Pescar, Programación Salta</p>    
             </div>
-        </section>
-
-        <div id="searchResults">
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre">
+                <button onclick="searchCards()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </div>
-        
-        <section class="cards-container" id="cards">
-        </section>
-    </main>
-    <script src="resources/js/filter-cards.js"></script>
+    </section>
+    <div id="roleFilters">
+        <button id="showAllButton">Mostrar todos</button>
+        <button id="showMentors">Mostrar Mentores</button>
+        <button id="showMentees">Mostrar Mentees</button>
+    </div>
+    <div id="searchResults">
+    </div>
+    
+    <section class="cards-container" id="mentors">
+        <!-- Aquí se mostrarán los mentores -->
+    </section>
+    
+    <section class="cards-container" id="mentees">
+        <!-- Aquí se mostrarán los mentees -->
+    </section>
+
+    <div id="dataContainer"></div>
+    <script src="resources/js/profiles.js"></script>
     <script src="resources/js/hearder.js"></script>
 </body>
 </html>
