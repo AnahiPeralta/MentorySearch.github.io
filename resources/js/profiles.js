@@ -7,21 +7,25 @@ const jsonFile = './data.json';
 let originalData = [];
 let currentRole = '';
 
-// Utiliza fetch para cargar el archivo JSON
-
-  fetch(jsonFile)
-  .then(response => response.json())
-  .then(data => {
-    originalData = data;
-    showAllData(originalData); // Mostrar todos los datos al cargar
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON:', error);
-  });
-  
-  
 function removeAccents(text) {
   return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function removeDuplicatesByNameAndLastName(data) {
+  const unique = new Map();
+  const result = [];
+
+  data.forEach(item => {
+    const mentorData = item.mentor;
+    const key = mentorData.name + mentorData.last_name;
+
+    if (!unique.has(key)) {
+      unique.set(key, true);
+      result.push(item);
+    }
+  });
+
+  return result;
 }
 
 function showAllData(data) {
@@ -78,10 +82,7 @@ function filterData(role = currentRole) {
 function displayData(data) {
   dataContainer.innerHTML = '';
 
-  console.log("Current Role:", currentRole);
   const filteredData = filterData();
-
-  console.log("Filtered Data:", filteredData);
 
   filteredData.forEach(item => {
     const roleData = currentRole === 'mentor' ? item.mentor : item.mentee;
@@ -98,7 +99,6 @@ function displayData(data) {
     }
   });
 }
-
 
 searchInput.addEventListener('input', () => {
   displayData(originalData);
@@ -118,3 +118,14 @@ showMenteesButton.addEventListener('click', () => {
   currentRole = 'mentee';
   displayData(filterData('mentee')); // Filtrar por mentee
 });
+
+// Utiliza fetch para cargar el archivo JSON
+fetch(jsonFile)
+  .then(response => response.json())
+  .then(data => {
+    originalData = removeDuplicatesByNameAndLastName(data);
+    showAllData(originalData); // Mostrar todos los datos al cargar
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });

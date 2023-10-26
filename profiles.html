@@ -31,36 +31,41 @@
             </div>
         </nav>
     </header>
-    <section class="headerOne">
-        <div class="background-image"></div>
-        <div class="container">
-            <div class="container-text">
-                <h1 id="typing-text">"Si crees en <strong>ti mismo</strong>, no habrá nada que esté fuera de tus posibilidades"</h1>
-                <p>Equipo del Centro Pescar, Programación Salta</p>    
+    <main>
+        <section class="headerOne">
+            <div class="background-image"></div>
+            <div class="container">
+                <div class="container-text">
+                    <h1 id="typing-text">"Si crees en <strong>ti mismo</strong>, no habrá nada que esté fuera de tus posibilidades"</h1>
+                    <p>Equipo del Centro Pescar, Programación Salta</p>    
+                </div>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre">
+                    <button onclick="searchCards()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </div>
-            <div class="search">
-                <input type="text" id="searchInput" placeholder="Buscar por nombre">
-                <button onclick="searchCards()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>
+        <section>
+            <div id="roleFilters">
+                <button id="showAllButton">Mostrar todos</button>
+                <button id="showMentors">Mostrar Mentores</button>
+                <button id="showMentees">Mostrar Mentees</button>
             </div>
-        </div>
-    </section>
-    <div id="roleFilters">
-        <button id="showAllButton">Mostrar todos</button>
-        <button id="showMentors">Mostrar Mentores</button>
-        <button id="showMentees">Mostrar Mentees</button>
-    </div>
-    <div id="searchResults">
-    </div>
+        
+            <div id="searchResults">
+            </div>
+        </section>
+        
+        <section class="cards-container" id="mentors">
+            <!-- Aquí se mostrarán los mentores -->
+        </section>
+        
+        <section class="cards-container" id="mentees">
+            <!-- Aquí se mostrarán los mentees -->
+        </section>
     
-    <section class="cards-container" id="mentors">
-        <!-- Aquí se mostrarán los mentores -->
-    </section>
-    
-    <section class="cards-container" id="mentees">
-        <!-- Aquí se mostrarán los mentees -->
-    </section>
-
-    <div id="dataContainer"></div>
+        <div id="dataContainer"></div>
+    </main>
     <script src="resources/js/profiles.js"></script>
     <script src="resources/js/hearder.js"></script>
 </body>
