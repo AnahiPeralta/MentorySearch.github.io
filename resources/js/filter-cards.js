@@ -20,26 +20,32 @@ function displayCards(cards) {
 function createCardHTML(card) {
     return `
     <div class="card-mentoring">
-        <div class="mentor">
-            <a href="${card.mentor.linkedin}" target="_blank">
+        <div class="mentor-container">
+            <div class="container-img">
                 <img class="img-perfil" src="${card.mentor.profile}" class="card-img-top" alt="${card.mentor.name}">
-            </a>
+            </div>
+            <div class="redes-mentor">
+                <a href="${card.mentor.linkedin}" target="_blank"></a>
+            </div>
             <div class='info-mentor'>
                 <span>${card.mentor.role}</span>
                 <h4 class="card-title">${card.mentor.name} ${card.mentor.last_name}</h4>
             </div>
         </div>
         <div class="hall">
-            <p class="text-hall">Hall ${card.mentor.hall}</p>
+            <p class="text-hall">Sala de Zoom N° ${card.mentor.hall}</p>
         </div>
-        <div class="mentee">
+        <div class="mentee-container">
             <div class='info-mentee'>
                 <span>${card.mentee.role}</span>
                 <h4 class="card-title">${card.mentee.name} ${card.mentee.last_name}</h4>
             </div>
-            <a href="${card.mentee.linkedin}" target="_blank">
+            <div class="container-img">
                 <img class="img-perfil" src="${card.mentee.profile}" class="card-img-top" alt="${card.mentee.name}">
-            </a>
+            </div>
+            <div class="redes-mentor">
+                <a href="${card.mentee.linkedin}" target="_blank"></a>
+            </div>
         </div>
     </div>`;
 }

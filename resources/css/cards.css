@@ -77,7 +77,7 @@
     font-size: 19px;
     color: white;
     background-color: #1F288C;
-    border: 2px solid #1F288C;
+    border: 1px solid #1F288C;
     cursor: pointer;
     transition: 0.5s;
     border-radius: 0px 10px 10px 0px;
@@ -110,17 +110,21 @@
 
 .card-mentoring {
     padding: 30px;
-    background-color: rgb(207, 207, 207);
-    border: 1px solid #ccc;
+    background-color: rgb(231, 231, 231);
     border-radius: 5px;
     text-align: center;
 }
 
-.mentor img, .mentee img{
-    height: 60px;
+.container-img {
+    height: 100px;
+    width: 100px;
 }
 
-
+.mentor-container img, .mentee-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
 
 
 @keyframes moveBackground {
