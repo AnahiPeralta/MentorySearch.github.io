@@ -102,19 +102,18 @@
 .cards-container {
     padding: 60px 7%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .card-mentoring {
-    padding: 30px;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(209, 209, 209);
     border-radius: 5px;
-    text-align: center;
 }
 
+/*Estilos de img*/
 .container-img {
     height: 100px;
     width: 100px;
@@ -172,9 +171,8 @@
         font-size: 22px;
         margin-top: 15px;
     }   
-
-    .card-mentoring {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas de 720px o menos */
+    .cards-container {
+        grid-template-columns: 1fr;
     }
 }
 
