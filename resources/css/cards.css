@@ -59,13 +59,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .search input {
     width: 100%;
     padding: 13px;
     font-size: 16px;
-    color: hsl(0, 0%, 29%);
+    color: hsl(0, 0%, 53%);
+    border: 1px solid;
+    border-radius: 10px 0px 0px 10px;
+    transition: 0.5s;
 }
 
 .search button {
@@ -76,6 +80,7 @@
     border: 2px solid #1F288C;
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .search button:hover {
@@ -84,21 +89,35 @@
 }
 
 #searchInput:focus {
-    border: 2px solid hsl(0, 0%, 44%);
+    border: 1px solid hsl(0, 0%, 100%);
     outline: none; 
-    border-radius: 2px;
+    border-radius: 10px 0px 0px 10px;
+    transition: 0.5s;
+    box-shadow: 0 0 8px rgba(25, 0, 255, 0.582);
+}
+
+
+/*Estilos de cards*/
+
+.cards-container {
+    padding: 60px 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-mentoring {
+    padding: 30px;
+    background-color: rgb(207, 207, 207);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .mentor img, .mentee img{
     height: 60px;
-}
-
-.card-mentoring {
-    padding: 60px 7%;
-}
-
-.section-before-cards {
-    height: 100vh; /* Ajusta la altura según tus necesidades */
 }
 
 
@@ -135,7 +154,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 720px) {
     .container-text {
         padding: 18% 4% 10% 4%;
     }
@@ -149,6 +168,10 @@
         font-size: 22px;
         margin-top: 15px;
     }   
+
+    .card-mentoring {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas de 720px o menos */
+    }
 }
 
 @media (max-width: 600px) {
